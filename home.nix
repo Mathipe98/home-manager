@@ -5,12 +5,17 @@
   ...
 }: 
 {
-  programs.home-manager.enable = true;  
+  programs.home-manager.enable = true;
+  fonts.fontconfig.enable = true;
 
   home = {
     packages = [
       pkgs.hello
       pkgs.nodejs
+      pkgs.ripgrep
+      pkgs.xclip # WSL to Windows clipboard
+      (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "0xProto" ]; })
+      (pkgs.python311.withPackages (ps: with ps; [ pip ]))
     ];
 
     
