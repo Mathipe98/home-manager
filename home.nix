@@ -1,7 +1,7 @@
 {
   inputs,
   pkgs,
-  pkgs-unstable,
+  #pkgs-unstable,
   ...
 }: 
 {
@@ -11,7 +11,6 @@
     packages = [
       pkgs.hello
       pkgs.nodejs
-      pkgs-unstable.neovim
     ];
 
     
@@ -22,7 +21,7 @@
 
     # You do not need to change this if you're reading this in the future.
     # Don't ever change this after the first build.  Don't ask questions.
-    stateVersion = "23.11";
+    stateVersion = "24.11";
   };
   
 }
