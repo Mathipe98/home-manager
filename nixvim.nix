@@ -11,6 +11,10 @@
     #inputs.nixvim.nixDarwinModules.nixvim
 
     # Plugins
+    ./nvim/treesitter.nix
+    ./nvim/telescope.nix
+    ./nvim/keymaps.nix
+    # ./nvim/auto_cmds.nix
     # ./plugins/gitsigns.nix
     # ./plugins/which-key.nix
     # ./plugins/telescope.nix
