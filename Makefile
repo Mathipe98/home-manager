@@ -3,3 +3,7 @@
 .PHONY: update
 update:
 	home-manager switch --flake .#mathipe
+
+.PHONY: clean
+clean:
+	nix-collect-garbage -d

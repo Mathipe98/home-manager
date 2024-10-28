@@ -1,9 +1,20 @@
-{ lib, pkgs, ... }:
 {
+  inputs,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: 
+{
+  programs.home-manager.enable = true;  
+
   home = {
-    packages = with pkgs; [
-      hello
+    packages = [
+      pkgs.hello
+      pkgs.nodejs
+      pkgs-unstable.neovim
     ];
+
+    
 
     # This needs to actually be set to your username
     username = "mathipe";
@@ -13,4 +24,5 @@
     # Don't ever change this after the first build.  Don't ask questions.
     stateVersion = "23.11";
   };
+  
 }
