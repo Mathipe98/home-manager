@@ -14,9 +14,10 @@
   };
 
   imports = [
-    ./plugins/autocmds.nix
+    ./autocmds.nix
     ./plugins/treesitter.nix
     ./plugins/telescope.nix
+    ./plugins/neo-tree.nix
 
   ];
 
