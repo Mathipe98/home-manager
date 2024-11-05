@@ -1,12 +1,18 @@
 {
   inputs,
   pkgs,
+  nixvim,
   #pkgs-unstable,
   ...
 }: 
 {
   programs.home-manager.enable = true;
   fonts.fontconfig.enable = true;
+
+  imports = [
+    ./nvim
+    nixvim.homeManagerModules.nixvim
+  ];
 
   home = {
     packages = [

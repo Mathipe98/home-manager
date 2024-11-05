@@ -35,8 +35,8 @@
       homeConfigurations = {
         mathipe = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [ ./home.nix ./nixvim.nix ];
+          extraSpecialArgs = { inherit inputs; inherit nixvim; };
+          modules = [ ./home.nix ];
         };
       };
     };
