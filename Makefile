@@ -2,7 +2,7 @@
 # But you're not copy/pasting, are you?
 .PHONY: update
 update:
-	home-manager switch --flake .#mathipe
+	home-manager switch --extra-experimental-features nix-command --extra-experimental-features flakes --flake .#mathipe
 
 .PHONY: clean
 clean:
