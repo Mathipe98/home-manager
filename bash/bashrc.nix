@@ -3,9 +3,6 @@
     enable = true;
     initExtra = ''
       eval "$(fzf --bash)"
-
-      # include .profile if it exists
-      [[ -f ~/.profile ]] && . ~/.profile
     '';
 
     bashrcExtra = ''

@@ -16,7 +16,8 @@
   };
 
   imports = [
-    ./bashrc.nix
+    ./bash/bashrc.nix
+    ./bash/fzf-git.nix
   ];
 
   home = {
