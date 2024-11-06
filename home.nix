@@ -8,18 +8,16 @@
 {
   programs.home-manager.enable = true;
   fonts.fontconfig.enable = true;
-
-  programs.bash = {
-    enable = true;
-    initExtra = ''
-      eval "$(fzf --bash)"
-    '';
-  };
+  
 
   programs.neovim = {
     enable = true;
     defaultEditor = true;
   };
+
+  imports = [
+    ./bashrc.nix
+  ];
 
   home = {
     packages = [
@@ -29,6 +27,7 @@
       (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "0xProto" ]; })
       (pkgs.python311.withPackages (ps: with ps; [ pip ]))
       pkgs.fzf
+      pkgs.fd
     ];
 
     
