@@ -1,8 +1,6 @@
 {
   description = "My Home Manager configuration";
 
-  
-
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; #"github:nixos/nixpkgs/nixos-23.11";
