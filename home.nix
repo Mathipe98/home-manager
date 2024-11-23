@@ -29,7 +29,16 @@
       (pkgs.python311.withPackages (ps: with ps; [ pip ]))
       pkgs.fzf
       pkgs.fd
+      pgks.bat
+      pkgs.oh-my-posh
     ];
+
+    file = {
+        ".bashrc".source = ~/dotfiles/bash/.bashrc;
+        "fzf-git.sh".source = ~/dotfiles/bash/fzf-git.sh;
+        "jandedobbeleer.omp.json".source = ~/dotfiles/bash/jandedobbeleer.omp.json;
+
+        };
 
     
 
