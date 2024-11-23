@@ -31,6 +31,7 @@
       pkgs.fd
       pgks.bat
       pkgs.oh-my-posh
+      pkgs.eza
     ];
 
     file = {
