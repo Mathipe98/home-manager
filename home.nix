@@ -29,15 +29,15 @@
       (pkgs.python311.withPackages (ps: with ps; [ pip ]))
       pkgs.fzf
       pkgs.fd
-      pgks.bat
+      pkgs.bat
       pkgs.oh-my-posh
       pkgs.eza
     ];
 
     file = {
-        ".bashrc".source = ~/dotfiles/bash/.bashrc;
-        "fzf-git.sh".source = ~/dotfiles/bash/fzf-git.sh;
-        "jandedobbeleer.omp.json".source = ~/dotfiles/bash/jandedobbeleer.omp.json;
+        ".bashrc".source = dotfiles/bash/.bashrc;
+        "fzf-git.sh".source = dotfiles/bash/fzf-git.sh;
+        "jandedobbeleer.omp.json".source = dotfiles/bash/jandedobbeleer.omp.json;
 
         };
 
@@ -52,7 +52,7 @@
     stateVersion = "24.11";
     
     file."nvim" = {
-      source = ~/.config/nvim;
+      source = dotfiles/nvim;
       recursive = true;
     };
   };
