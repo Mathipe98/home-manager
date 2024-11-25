@@ -15,11 +15,6 @@
     defaultEditor = true;
   };
 
-  imports = [
-    ./bash/bashrc.nix
-    ./bash/fzf-git.nix
-  ];
-
   home = {
     packages = [
       pkgs.nodejs
@@ -34,12 +29,12 @@
       pkgs.eza
     ];
 
-    file = {
-        ".bashrc".source = dotfiles/bash/.bashrc;
-        "fzf-git.sh".source = dotfiles/bash/fzf-git.sh;
-        "jandedobbeleer.omp.json".source = dotfiles/bash/jandedobbeleer.omp.json;
-
-        };
+#    file = {
+#        ".bashrc".source = ./dotfiles/bash/.bashrc;
+#        "fzf-git.sh".source = ./dotfiles/bash/fzf-git.sh;
+#        "jandedobbeleer.omp.json".source = ./dotfiles/bash/jandedobbeleer.omp.json;
+#
+#        };
 
     
 
@@ -50,11 +45,20 @@
     # You do not need to change this if you're reading this in the future.
     # Don't ever change this after the first build.  Don't ask questions.
     stateVersion = "24.11";
+
+    file."tmp.txt".source = ./tmp/tmp.txt;
+    file."LICENSE".source = ./dotfiles/LICENSE;
     
-    file."nvim" = {
-      source = dotfiles/nvim;
-      recursive = true;
-    };
+    #file."nvim" = {
+    #  source = dotfiles/nvim;
+    #  target = ".config/nvim";
+    #  recursive = true;
+    #};
+
+    #file."bashrc" = {
+    #  source = dotfiles/bash/.bashrc;
+    #  target = ".bashrc";
+    #};
   };
 
   
