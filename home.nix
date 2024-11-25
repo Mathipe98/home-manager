@@ -29,6 +29,18 @@
       pkgs.eza
     ];
 
+    file."bash" = {
+      recursive = true;
+      source = ./dotfiles/bash;
+      target = ".config/bash";
+    };
+    
+    file."nvim" = {
+      source = ./dotfiles/nvim;
+      target = ".config/nvim";
+      recursive = true;
+    };
+
 #    file = {
 #        ".bashrc".source = ./dotfiles/bash/.bashrc;
 #        "fzf-git.sh".source = ./dotfiles/bash/fzf-git.sh;
@@ -45,14 +57,10 @@
     # You do not need to change this if you're reading this in the future.
     # Don't ever change this after the first build.  Don't ask questions.
     stateVersion = "24.11";
-    
-    file."nvim" = {
-      source = ./dotfiles/nvim;
-      target = ".config/nvim";
-      recursive = true;
-    };
 
-    file.".bashrc".source = ./dotfiles/bash/.bashrc;
+    
+
+    
   };
 
   
