@@ -29,11 +29,6 @@
       pkgs.eza
     ];
 
-    file."bash" = {
-      recursive = true;
-      source = ./dotfiles/bash;
-      target = ".config/bash";
-    };
     
     file."nvim" = {
       source = ./dotfiles/nvim;
@@ -41,12 +36,11 @@
       recursive = true;
     };
 
-#    file = {
-#        ".bashrc".source = ./dotfiles/bash/.bashrc;
-#        "fzf-git.sh".source = ./dotfiles/bash/fzf-git.sh;
-#        "jandedobbeleer.omp.json".source = ./dotfiles/bash/jandedobbeleer.omp.json;
-#
-#        };
+    file = {
+        ".bashrc".source = ./dotfiles/bash/.bashrc;
+        "fzf-git.sh".source = ./dotfiles/bash/fzf-git.sh;
+        "jandedobbeleer.omp.json".source = ./dotfiles/bash/jandedobbeleer.omp.json;
+    };
 
     
 
