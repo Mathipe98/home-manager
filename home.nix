@@ -45,20 +45,14 @@
     # You do not need to change this if you're reading this in the future.
     # Don't ever change this after the first build.  Don't ask questions.
     stateVersion = "24.11";
-
-    file."tmp.txt".source = ./tmp/tmp.txt;
-    file."LICENSE".source = ./dotfiles/LICENSE;
     
-    #file."nvim" = {
-    #  source = dotfiles/nvim;
-    #  target = ".config/nvim";
-    #  recursive = true;
-    #};
+    file."nvim" = {
+      source = ./dotfiles/nvim;
+      target = ".config/nvim";
+      recursive = true;
+    };
 
-    #file."bashrc" = {
-    #  source = dotfiles/bash/.bashrc;
-    #  target = ".bashrc";
-    #};
+    file.".bashrc".source = ./dotfiles/bash/.bashrc;
   };
 
   
