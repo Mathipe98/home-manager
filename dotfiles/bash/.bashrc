@@ -131,11 +131,6 @@ git_branch() {
     git branch 2>/dev/null | sed -e '/^[^*]/ d' -e 's/* \(.*\) \1/ '
 }
 
-HOST='\[\033[02;36m\]\h'
-LOCATION=' \[\033[01;34m\]`pwd | sed "s#/home/mathipe#~#" | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g"`'
-BRANCH='\[\033[00;33m\]$(__git_ps1)\[\033[00m\]\$: '
-TERMINAL_USER='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:'
-PS1=$TERMINAL_USER$LOCATION$BRANCH
 alias listJava='sdk list java | grep installed'
 
 # pnpm
@@ -151,10 +146,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH=$BUN_INSTALL/bin:$PATH
-export PATH="$PATH:/opt/nvim-linux64/bin"
-. "/home/mathipe/.deno/env"
+#export BUN_INSTALL="$HOME/.bun"
+#export PATH=$BUN_INSTALL/bin:$PATH
+#export PATH="$PATH:/opt/nvim-linux64/bin"
+#. "/home/mathipe/.deno/env"
 
 # ---- Oh My Posh ----
 
@@ -164,6 +159,9 @@ eval "$(oh-my-posh init bash --config ~/jandedobbeleer.omp.json)"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+
+# ---- INIT PRINT -----
+fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 
 # --- setup fzf theme ---
 fg="#CBE0F0"
